@@ -1,7 +1,7 @@
 # imported sys to allow the use of argv
 import sys
 
-# add a coounter variable for the loop
+# add a counter variable for the loop
 i = 0
 
 # check whether an upper limit argument was added at runtime
