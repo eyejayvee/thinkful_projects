@@ -23,10 +23,8 @@ def main():
   for k,v in questions.items():
     response = str(raw_input(v + ": ")).lower()
     if  response == "y" or response == "yes":
-      #print "You said: " + response
       responses[k] = True
     elif response == "n" or response == "no":
-      #print "You said: " + response
       responses[k] = False
     else:
       # TO-DO allow the question to be repeated if the user enters incorrect details
@@ -40,10 +38,11 @@ def mix_drink(style):
     if ingredients.has_key(k) and v == True:
       drink.append(random.choice(ingredients[k]))
 
-  #print str(drink)
   return drink
 
 if __name__ == '__main__':
   main()
   mix_drink(responses)
-  print str(drink[:-1])
+  print "\n Oy, yer drink is ready with the following custom mix: "
+  for ingredient in drink:
+    print "{}".format(ingredient)

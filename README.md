@@ -8,6 +8,6 @@ Enjoy!
 ##Lesson 3 
 ##Pirate Bartender
 
-The next saga in my learning journey is a program that has a cheecky pirate bartender asking a client whether what characteristics they like their drinks to have. Once all his questions are answered he mixes up a magic cocktail for your enjoyment. The current version of the program consists of the basic requirments at the moment. Expect more iterations soon.
+The next saga in my learning journey is a program that has a cheeky pirate bartender asking a client whether what characteristics they like their drinks to have. Once all his questions are answered he mixes up a magic cocktail for your enjoyment. The current version of the program consists of the basic requirements at the moment. Expect more iterations soon.
 
 Have a drink on the house!
