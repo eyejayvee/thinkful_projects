@@ -29,6 +29,7 @@ def main():
       #print "You said: " + response
       responses[k] = False
     else:
+      # TO-DO allow the question to be repeated if the user enters incorrect details
       print "Errr, yer already drunk, I can't understand yer. Next question."
 
   return responses
@@ -45,4 +46,4 @@ def mix_drink(style):
 if __name__ == '__main__':
   main()
   mix_drink(responses)
-  print str(drink)
+  print str(drink[:-1])
