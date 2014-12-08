@@ -44,5 +44,6 @@ if __name__ == '__main__':
   main()
   mix_drink(responses)
   print "\n Oy, yer drink is ready with the following custom mix: "
+  #List the ingredients
   for ingredient in drink:
     print "{}".format(ingredient)
