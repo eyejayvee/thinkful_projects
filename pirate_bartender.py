@@ -16,34 +16,34 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
-responses = {}
 def main():
-  print "Welcome to the Smelly Squid! Answer a few yes (y) or no (n) questions and I'll mix yer a drink that'll give yer land legs.\n"
+  responses = {}
+  "Welcome to the Smelly Squid! How would yer like yer drink? "
 
-  for k,v in questions.items():
-    response = str(raw_input(v + ": ")).lower()
+  for flavour,question in questions.items():
+    response = str(raw_input(question + ": ")).lower()
     if  response == "y" or response == "yes":
-      responses[k] = True
+      responses[flavour] = True
     elif response == "n" or response == "no":
-      responses[k] = False
+      responses[flavour] = False
     else:
       # TO-DO allow the question to be repeated if the user enters incorrect details
       print "Errr, yer already drunk, I can't understand yer. Next question."
 
   return responses
 
-drink = []
 def mix_drink(style):
-  for k,v in style.items():
-    if ingredients.has_key(k) and v == True:
-      drink.append(random.choice(ingredients[k]))
+  drink = []
+  for flavour,ingredient in style.items():
+    if ingredients.has_key(flavour) and ingredient == True:
+      drink.append(random.choice(ingredients[flavour]))
 
   return drink
 
 if __name__ == '__main__':
-  main()
-  mix_drink(responses)
+  responses = main()
+  drink = mix_drink(responses)
   print "\nOy, yer drink is ready with the following custom mix: "
   #List the ingredients
   for ingredient in drink:
-    print "{}".format(ingredient)
+    print "- {}".format(ingredient)
