@@ -35,7 +35,7 @@ def main():
     band_no = 1 # thats me, the lead singer
 
     while band_no < 4:
-      applicant = add_muso = raw_input("What is your name? ")
+      applicant = raw_input("What is your name? ")
       instrument =  raw_input("What instrument do you play? Bass, Guitar or Drums? ")
 
       if instrument == "bass":
