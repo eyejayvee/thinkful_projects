@@ -1,7 +1,8 @@
 class Musician(object):
-    def __init__(self, sounds):
+    def __init__(self, sounds, applicant_name):
         self.sounds = sounds
-
+        self.applicant_name = applicant_name
+        
     def solo(self, length):
         for i in range(length):
             print self.sounds[i % len(self.sounds)],
@@ -10,8 +11,8 @@ class Musician(object):
 class Bassist(Musician): # The Musician class is the parent of the Bassist class
     def __init__(self):
         # Call the __init__ method of the parent class
-        super(Bassist, self).__init__(["Twang", "Thrumb", "Bling"])
-
+        super(Bassist, self).__init__(["Twang", "Thrumb", "Bling"], applicant_name)
+        
 class Guitarist(Musician):
     def __init__(self):
         # Call the __init__ method of the parent class
@@ -38,16 +39,18 @@ def main():
 
     while band_no < 4:
       applicant = raw_input("What is your name? ")
+      applicant_name = applicant.title() #added to get the name added of the potential band member
+      #print applicant_name
       instrument =  raw_input("What instrument do you play? Bass, Guitar or Drums? ")
 
       if instrument == "bass":
-          applicant = Bassist()
+          applicant = Bassist(applicant_name)
       elif instrument == "guitar":
           applicant = Guitarist()
       elif  instrument == "drums":
           applicant = Drummer()
       
-      print "Let's here you play %s.", applicant #not quite getting the issue / solution here
+      print "Let's here you play {}".format(instrument)  #not quite getting the issue / solution here
       applicant.solo(6)
 
       in_or_out = raw_input("Hmmm, let me think, so I add you or not? (y or n): ")
