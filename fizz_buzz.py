@@ -15,6 +15,7 @@ except IndexError:
 # loop while the counter is less than the upper limit provided
 # make sure to convert the argument to an integer
 while i < int(upper_limit):
+#for i in range(int(upper_limit)):
   # increment the counter
   i += 1
   if i % 3 == 0 and i % 5 == 0:
